@@ -1,5 +1,4 @@
 jQuery(document).ready(function($) {
-  jQuery('.image a').fancybox();
 	
 	var slwdwnSpeed = 1000; // 2000 = 2 seconds; 1000 = 1 seconds
 	var slwdwnElement = 'a.slwdwn';
