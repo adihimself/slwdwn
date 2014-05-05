@@ -1,16 +1,16 @@
 jQuery(document).ready(function($) {
 	
 	var slwdwnSpeed = 1000; // 2000 = 2 seconds; 1000 = 1 seconds
-	var slwdwnElement = 'a.slwdwn';
+	var slwdwnElement = 'a[href^="#"]';
 
-	jQuery(slwdwnElement).each(function(e){
-		jQuery(this).click(function(e){
+	$(slwdwnElement).each(function(){
+		$(this).click(function(e){
+            e.preventDefault();
 			var getID = $(this).attr('href');
 			var offset = $(getID).offset();
-			jQuery('html,body').animate({
+			$('html,body').animate({
 				scrollTop: offset.top	
 			},slwdwnSpeed);
-			return false;
 		});
 	});
 });
